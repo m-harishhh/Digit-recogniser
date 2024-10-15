@@ -1,54 +1,86 @@
-# Digit Classification with Random Forest
-A machine learning project for digit classification using the MNIST dataset and Random Forest algorithm.
+# MNIST Digit Classification using CNN and Random Forest
 
-## Table of Contents
-- [Overview](#overview)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Data](#data)
-- [Model](#model)
-- [Results](#results)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+This project uses a hybrid approach to classify the MNIST dataset using a Convolutional Neural Network (CNN) for feature extraction and a Random Forest classifier for final predictions.
+
+## Project Structure
+
+```
+├── code.ipynb          # Single file containing the entire project
+├── README.md                # Project README file
+├── submission.csv           # Prediction results for submission
+```
 
 ## Overview
-This project aims to classify handwritten digits from the MNIST dataset using a Random Forest model. The dataset consists of 70,000 images of handwritten digits, and the goal is to achieve high accuracy in classifying these digits.
 
-## Installation
-To set up the project locally, follow these steps:
+This project leverages CNNs to extract features from the MNIST dataset and a Random Forest classifier to predict the digit labels. The steps include:
+
+1. **Data Preprocessing**: Reshaping and normalizing the dataset.
+2. **CNN Model**: Building a CNN to extract features from the MNIST images.
+3. **Random Forest Model**: Using the CNN features to train a Random Forest classifier.
+4. **Prediction**: Making predictions on the test dataset and saving the results for submission.
+
+## Dataset
+
+The MNIST dataset contains 60,000 training images and 10,000 test images of handwritten digits. Each image is a 28x28 grayscale image, and the task is to predict the digit (0-9) that each image represents.
+
+Download the dataset from [Kaggle - MNIST Digit Recognizer](https://www.kaggle.com/c/digit-recognizer/data).
+
+## Requirements
+
+Install the required dependencies using:
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/digit-classification.git
+pip install tensorflow keras scikit-learn numpy pandas matplotlib
+```
 
-# Navigate to the project directory
-cd digit-classification
+### Dependencies:
 
-# Install required packages
-pip install -r requirements.txt
+- Python 3.8+
+- TensorFlow
+- Keras
+- Scikit-learn
+- NumPy
+- Pandas
+- Matplotlib
 
-# Load the model
-import joblib
-model = joblib.load('best_random_forest_model.pkl')
+## How to Run the Project
 
-# Make predictions
-predictions = model.predict(X_test)
+1. **Clone the repository**:
 
-Data
-The project uses the MNIST dataset, which can be downloaded from here. Preprocessing steps include normalization and reshaping of images.
+   ```bash
+   git clone https://github.com/your_username/mnist-cnn-rf.git
+   cd mnist-cnn-rf
+   ```
 
-Model
-The model is a Random Forest classifier trained with hyperparameter tuning using GridSearchCV. Key hyperparameters include n_estimators, max_depth, and min_samples_split.
+2. **Download the dataset** and place it in the appropriate directory.
 
-Results
-The model achieved an accuracy of 99.97% on the training dataset. The confusion matrix indicates high performance across all digit classes.
+3. **Run the script** to train the models and generate predictions:
 
-Contributing
-Contributions are welcome! Please submit a pull request or open an issue to discuss changes.
+   ```bash
+   python code.ipynb
+   ```
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+   This will load the MNIST dataset, train the CNN model, extract features, and train the Random Forest classifier. Finally, predictions will be generated and saved in `submission.csv`.
 
-Contact
-Harish - Your LinkedIn - your.email@example.com
+## Results
+
+- **Training Accuracy**: `99.97%`
+- **Test Accuracy**: `99.03%` (Kaggle Leaderboard Score: 396/1378)
+
+## Future Improvements
+
+- **Hyperparameter Tuning**: Experiment with different hyperparameters for both CNN and Random Forest to improve accuracy.
+- **Data Augmentation**: Introduce data augmentation techniques to improve model generalization.
+- **Ensemble Methods**: Explore other ensemble methods like Gradient Boosting or XGBoost for improved classification.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Thanks to [Kaggle](https://www.kaggle.com/) for the MNIST dataset and community contributions.
+- TensorFlow and Keras for making deep learning frameworks accessible.
+
+---
+
