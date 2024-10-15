@@ -27,3 +27,28 @@ cd digit-classification
 
 # Install required packages
 pip install -r requirements.txt
+
+# Load the model
+import joblib
+model = joblib.load('best_random_forest_model.pkl')
+
+# Make predictions
+predictions = model.predict(X_test)
+
+Data
+The project uses the MNIST dataset, which can be downloaded from here. Preprocessing steps include normalization and reshaping of images.
+
+Model
+The model is a Random Forest classifier trained with hyperparameter tuning using GridSearchCV. Key hyperparameters include n_estimators, max_depth, and min_samples_split.
+
+Results
+The model achieved an accuracy of 99.97% on the training dataset. The confusion matrix indicates high performance across all digit classes.
+
+Contributing
+Contributions are welcome! Please submit a pull request or open an issue to discuss changes.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Contact
+Harish - Your LinkedIn - your.email@example.com
