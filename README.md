@@ -1,6 +1,6 @@
 # MNIST Digit Classification using CNN and Random Forest
 
-This project uses a hybrid approach to classify the MNIST dataset using a Convolutional Neural Network (CNN) for feature extraction and a Random Forest classifier for final predictions.
+This project uses a ensembled approach to classify the MNIST dataset using a Convolutional Neural Network (CNN) for feature extraction and a Random Forest classifier for final predictions.
 
 ## Project Structure
 
