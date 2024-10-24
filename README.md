@@ -65,7 +65,7 @@ pip install tensorflow keras scikit-learn numpy pandas matplotlib
 ## Results
 
 - **Training Accuracy**: `99.97%`
-- **Test Accuracy**: `99.03%` (Kaggle Leaderboard Score: 396/1378)
+- **Test Accuracy**: `99.03%` (Kaggle Leaderboard Score: 381/1378)
 
 ## Future Improvements
 
