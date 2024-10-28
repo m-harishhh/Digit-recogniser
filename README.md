@@ -1,6 +1,6 @@
 # MNIST Digit Classification using CNN and Random Forest
 
-This project uses a ensembled approach to classify the MNIST dataset using a Convolutional Neural Network (CNN) for feature extraction and a Random Forest classifier for final predictions.
+This project uses an ensembled approach to classify the MNIST dataset using a Convolutional Neural Network (CNN) for feature extraction and a Random Forest classifier for final predictions.
 
 ## Project Structure
 
@@ -73,14 +73,11 @@ pip install tensorflow keras scikit-learn numpy pandas matplotlib
 - **Data Augmentation**: Introduce data augmentation techniques to improve model generalization.
 - **Ensemble Methods**: Explore other ensemble methods like Gradient Boosting or XGBoost for improved classification.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
 - Thanks to [Kaggle](https://www.kaggle.com/) for the MNIST dataset and community contributions.
 - TensorFlow and Keras for making deep learning frameworks accessible.
 
----
+
 
